@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" ; type="image/jpg" href="../html5/projeto-glass-html5/imagens/logo-Cópia.png">
+    <meta charset="UTF-8" />
+    <title>System Virtual Smart - Contato</title>
+    <link rel="stylesheet" type="text/css" href="projeto-glass-html5/_css/estilo.css" />
+    <link rel="stylesheet" href="projeto-glass-html5/_css/form.css" />
+</head>
+<script src="projeto-glass-html5/_javascript/funcoes.js"></script>
+<script>
+    function calc_total() {
+        var qtd = parseInt(document.getElementById('cQtd').value);
+        tot = qtd * 1899;
+        document.getElementById('cTot').value = tot;
+    }
+</script>
+
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <ul type="disc">
+                    <li onmouseover="mudaFoto('projeto-glass-html5/imagens/home.png')" onmouseout="mudaFoto('projeto-glass-html5/imagens/contato.png')"><a
+                            href="index.html">Home</a></li>
+                    <li onmouseover="mudaFoto('projeto-glass-html5/imagens/especificacoes.png')" onmouseout="mudaFoto('projeto-glass-html5/imagens/contato.png')"><a
+                            href="specs.html">Quem Somos</a></li>
+                    <li onmouseover="mudaFoto('projeto-glass-html5/imagens/fotos.png')" onmouseout="mudaFoto('projeto-glass-html5/imagens/contato.png')"><a
+                            href="fotos.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('projeto-glass-html5/imagens/contato.png ')" onmouseout="mudaFoto('projeto-glass-html5/imagens/contato.png')"><a
+                            href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+            <hgroup>
+                <h1> System Virtual Smart </h1>
+                <h2> A revolução dos Smartphones está chegando </h2>
+            </hgroup>
+            <img id="icone" src="projeto-glass-html5/imagens/contato.png" />
+        </header>
+        <section id="corpo-full">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                </header>
+
+                <form method="POST" id="fContato" action="pedrinho_360@hotmail.com" oninput="calc_total();">
+                    <fieldset id="usuario">
+                        <legend>Identificação do Usuário</legend>
+                        <p><label for="cName">Nome:</label> <input type="text" name="tName" id="cName" size="20"
+                                maxlength="30" placeholder="Nome Completo" /></p>
+                        <p><label for="cSenha">Senha:</label><input type="password" name="tSenha" id="cSenha" size="8"
+                                maxlength="8" placeholder="8 dígitos" /></p>
+                        <p><label for="cMail">E-mail:</label><input type="email" name="tMail" id="cMail" size="20"
+                                maxlength="40" placeholder="Email" /></p>
+                        <fieldset id="sexo">
+                            <legend>Sexo:</legend>
+                            <input type="radio" name="tSexo" id="cMasc" /><label for="cMasc">Masculino</label><br />
+                            <input type="radio" name="tSexo" id="cFem" /><label for="cFem">Feminino</label>
+                        </fieldset>
+                        <p><label for="cNas">Data de Nascimento:</label><input type="date" name="tNas" id="cNas" /></p>
+                    </fieldset>
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                        <p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" size="13"
+                                maxlength="80" placeholder="Rua,Av..." /></p>
+                        <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="9999" /></p>
+                        <p><label for="cEst">Estado:</label>
+                            <select name="tEst" id="cEst">
+                                <optgroup label="Região Sudeste">
+                                    <option value="SP" selected>São Paulo</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="MG">Minas Gerais</option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="SC">Santa Catarina</option>
+                                </optgroup>
+                                <option value="GO">Goiás</option>
+                                <option value="BA">Bahia</option>
+                                <option value="MT">Mato Grosso</option>
+
+                            </select></p>
+                        <p><label for="cCid">Cidade:</label>
+                            <input type="text" name="tCid" id="cCid" maxlength="40  " size="20" placeholder="Sua Cidade"
+                                list="cidades" /></p>
+                        <datalist id="cidades">
+                            <option value="Rio de Janeiro"></option>
+                            <option value="Nova Iguaçu"></option>
+                            <option value="Niterói"></option>
+                            <option value="Belford Roxo"></option>
+                        </datalist>
+                    </fieldset>
+                    <fieldset id="mensagem">
+                        <legend>Mensagem do Usuário</legend>
+                        <p><label for="cUrg">Grau de Urgência:Min</label>
+                            <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</p>
+                        <p><label for="cMsg">Mensagem:</label>
+                            <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Digite sua mensagem"></textarea></p>
+                    </fieldset>
+                    <fieldset id="pedido">
+                        <legend>Quero um Orçamento</legend>
+                        <p><input type="checkbox" name="tPed" id="cPed" checked />
+                            <label for="cPed">Gostaria de adquirir uma VM System Virtual Smart</label></p>
+                        <p><label for="cQtd">Quantidade:</label>
+                            <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0" /></p>
+                        <p><label for="cTot">Preço Total: R$</label>
+                            <input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly /></p>
+                    </fieldset>
+                    <a href="botao.html"><img src="projeto-glass-html5/imagens/botao-enviar.png"></a>
+                </form>
+            </article>
+        </section>
+
+        <footer id="rodape">
+            <p> Copyright &copy 2018 - System Virtual Smart Corporation </br>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
