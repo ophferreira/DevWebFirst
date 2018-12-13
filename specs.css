@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+section#conteudo{
+    text-align: center;
+    margin: auto;
+}
+.h3{
+    font-family:'FonteLogo', sans-serif;
+    font-size: 2vw;
+    color: #606060;
+}
+#cabecalho-artigo h2{
+    text-align: center;`
+}
+ul{
+    list-style: none;
+}
